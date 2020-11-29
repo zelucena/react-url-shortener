@@ -13,8 +13,13 @@ const UrlShortener = () => {
     const [url, setUrl] = useState({ long: '', short: '' });
 
     const copyToClipboard = text => {
-        navigator.clipboard.writeText(text);
-        toast.success(`Copied to clipboard`)
+        const { clipboard } = navigator;
+        if (clipboard) {
+            navigator.clipboard.writeText(text);
+            toast.success(`Copied to clipboard`);
+        } else {
+            toast.warning(`Please copy your link: ` + text);
+        }
     }
 
     const onSubmit = useCallback(payload => {

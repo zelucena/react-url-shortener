@@ -8,9 +8,6 @@ module.exports = {
             PM2_SERVE_SPA: 'true',
             PM2_SERVE_HOMEPAGE: '/index.html',
             NODE_ENV: "production",
-            REACT_APP_API_HOST: "localhost",
-            REACT_APP_API_PORT: 3333,
-            REACT_APP_API_ADDRESS: "http://$REACT_APP_API_HOST:$REACT_APP_API_PORT",
         },
     }]
 }
