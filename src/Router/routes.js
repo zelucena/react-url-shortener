@@ -1,4 +1,4 @@
-import UrlShortener from 'pages/UrlShortener';
+import UrlShortener from 'pages/UrlShortner';
 
 export default [
     {
